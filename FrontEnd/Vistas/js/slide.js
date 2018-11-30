@@ -4,7 +4,11 @@ SLIDE DE PRODUCTOS
 =======================================*/
 var item = 0, interruptirCiclo = false, detenerIntervalo = false, imgProducto = $(".imgProducto");
 var textoSlide = $(".textosSlide");//, textoSlideh2 = $("#slide h2"), textoSlideh3 = $("#slide h3");
-var toogle = false;
+var toogle = false, numeroItem = $("#paginacion li");
+
+var paraLi = 100/numeroItem, paraUl = 100*numeroItem;
+$("#slide ul li").css({"width":paraLi+"%"});
+$("#slide ul").css({"width":paraUl+"%"});
 
 (function ready() {
 	/*----------  PAGINACION  ----------*/
@@ -90,14 +94,21 @@ function animacionObetosSlide(objetoAnimacion){
 /*----------  FUNCION RETROCEDER Y AVANZAR  ----------*/
 function retrocederAvanzar(opcion){
 	var nuevoItem = item + opcion;
-	if(nuevoItem > 1){
+ 
+		console.log("item"+item);
+		console.log("opcion"+opcion);
+
+	if(nuevoItem >= numeroItem.length){
 		item = 0;
+		console.log("PONER A CERO" +item);
 	}
-	else if(nuevoItem < 0){
-		item =1 ;
+	else if(nuevoItem <= 0){
+		item = numeroItem.length-1;
+		console.log("poner al ultimo"+item);
 	}
 	else{
 		item = nuevoItem;
+		console.log("actualizar"+nuevoItem);
 	}
 	movimientoSlide(item);
 }

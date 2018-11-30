@@ -10,21 +10,21 @@ SLIDE
 	padding: 0;
 }
 
-#slide ul{
-	position: relative;
-	left: 0%;
-	margin: auto;
-	height: auto;
-	width: 200%;
-	clear: both;
-	display: table;
+#slide ul {
+    position: relative;
+    left: 0px;
+    margin: auto;
+    height: auto;
+    width: 400%;
+    clear: both;
+    display: table;
 }
 
-#slide ul li{
-	position: relative;
-	float: left;
-	width: 50%;
- }
+#slide ul li {
+    position: relative;
+    float: left;
+    width: 25%;
+}
 
  #slide ul li img{
  	width: 100%;
@@ -129,13 +129,13 @@ FLECHAS
 
 #slide #retroceder{
 	background: #666;
-	left: 0;
+	left: 0px;
 	opacity: 0;
 }
 
 #slide #avanzar{
 	background: #666;
-	right: 0;
+	right: 0px;
 	opacity: 0;
 }
 

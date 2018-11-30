@@ -32,7 +32,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/header.css?v=4">
 
-	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/slide.css?v=2">
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/slide.css?v=3">
 
 	<!-- <link rel="stylesheet" type="text/css"  href="Vistas/css/plugins/fontawesome.css"> -->
 
@@ -106,7 +106,7 @@
 	 				
 	<script src="<?php echo $url;?>Vistas/js/plantilla.js?v=1"></script>	
 
-	<script src="<?php echo $url;?>Vistas/js/slide.js?v=2"></script> 
+	<script src="<?php echo $url;?>Vistas/js/slide.js?v=5"></script> 
 
 <!--====  End of LLAMADA A JAVASCRIPT  ====-->
 
