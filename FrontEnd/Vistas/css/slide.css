@@ -15,7 +15,7 @@ SLIDE
     left: 0px;
     margin: auto;
     height: auto;
-    width: 400%;
+    /*width: 400%;*/
     clear: both;
     display: table;
 }
@@ -23,7 +23,7 @@ SLIDE
 #slide ul li {
     position: relative;
     float: left;
-    width: 25%;
+    /*width: 25%;*/
 }
 
  #slide ul li img{

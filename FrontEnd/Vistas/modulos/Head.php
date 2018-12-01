@@ -2,6 +2,9 @@
 <!--===========================
 =            HEAD             =
 ============================-->
+	<?php 
+		$servidor = Ruta::ctrRutaServidor();$servidor
+	?>
 
 <div class="container-fluid barraSuperior" id="top">
 	<div class="container">
@@ -66,9 +69,10 @@
 			<!--==============================
 			=            LOGOTIPO            =
 			===============================-->
+		
 			<div class="col-xs-12 col-sm-2 col-md-3" id="logotipo">
 				<a href="#" >
-					<img src="http://localhost/BackEnd/<?php echo $social["logo"] ?>" class="img-responsive">
+					<img src="<?php echo $servidor.$social["logo"] ?>" class="img-responsive">
 				</a>
 			</div>
 			<!--==================================================

@@ -13,7 +13,8 @@
  	<!-- <base href="Vistas/"> -->
  	<?php 
  	   $icono = ControladorPlantilla::ctrEstiloPlantilla();
- 	   echo '<link rel="icon" href="http://localhost/BackEnd/'.$icono["icono"].'">';
+ 	   $servidor = Ruta::ctrRutaServidor();
+ 	   echo '<link rel="icon" href="'.$servidor.$icono["icono"].'">';
 
  	   /*=====================================================
  	   =            MANTENER LA RUTA DEL PROYECTO            =

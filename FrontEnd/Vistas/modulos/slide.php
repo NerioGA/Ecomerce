@@ -14,6 +14,7 @@
 
 			<?php 
 
+				$servidor = Ruta::ctrRutaServidor();
 				$slide = ControladorSlide::ctrMostrarSlide();
 
 				foreach ($slide as $key => $value) {
@@ -30,10 +31,17 @@
 
 					echo '
 							<li>
-								<img src="http://localhost/Ecomerces/backend/'.$value["imgFondo"].'">
+								<img src="'.$servidor.$value["imgFondo"].'">
 								<div class="slideOpciones '.$value["tipoSlide"].'">
-									<img class="imgProducto" src="http://localhost/Ecomerces/BackEnd/'.$value["imgProducto"].'" style="top: '.$estiloImgProducto["top"].'; right: '.$estiloImgProducto["right"].'; width: '.$estiloImgProducto["width"].'; left:'.$estiloImgProducto["left"].'">
+								';
+								
+								if($value["imgProducto"] != "")
+								{
+									echo ' <img class="imgProducto" src="'.$servidor.$value["imgProducto"].'" style="top: '.$estiloImgProducto["top"].'; right: '.$estiloImgProducto["right"].'; width: '.$estiloImgProducto["width"].'; left:'.$estiloImgProducto["left"].'">
+								';
+								}
 
+								echo ' 
 									<div class="textosSlide"  style="top: '.$estiloTextoSlide["top"].'; right: '.$estiloTextoSlide["right"].'; width: '.$estiloTextoSlide["width"].'; left:'.$estiloTextoSlide["left"].'">
 										<h1 style="color: '.$titulo1["color"].';">'.$titulo1["texto"].' </h1>
 										<h2  style="color:'.$titulo2["color"].'">'.$titulo2["texto"].'</h2>

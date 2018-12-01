@@ -6,11 +6,15 @@ var item = 0, interruptirCiclo = false, detenerIntervalo = false, imgProducto = 
 var textoSlide = $(".textosSlide");//, textoSlideh2 = $("#slide h2"), textoSlideh3 = $("#slide h3");
 var toogle = false, numeroItem = $("#paginacion li");
 
-var paraLi = 100/numeroItem, paraUl = 100*numeroItem;
-$("#slide ul li").css({"width":paraLi+"%"});
-$("#slide ul").css({"width":paraUl+"%"});
 
 (function ready() {
+
+	/*----------  PARA LAS IMAGENES DINAMICOS SLIDE  ----------*/
+	var paraLi = 100/numeroItem.length, paraUl = 100*numeroItem.length;
+	$("#slide ul li").css({"width":paraLi+"%"});
+	$("#slide ul").css({"width":paraUl+"%"});
+
+
 	/*----------  PAGINACION  ----------*/
 	
 	 $("#paginacion li").on("click", function(){
@@ -100,15 +104,13 @@ function retrocederAvanzar(opcion){
 
 	if(nuevoItem >= numeroItem.length){
 		item = 0;
-		console.log("PONER A CERO" +item);
+		interruptirCiclo = true;
 	}
 	else if(nuevoItem <= 0){
 		item = numeroItem.length-1;
-		console.log("poner al ultimo"+item);
 	}
 	else{
 		item = nuevoItem;
-		console.log("actualizar"+nuevoItem);
 	}
 	movimientoSlide(item);
 }
