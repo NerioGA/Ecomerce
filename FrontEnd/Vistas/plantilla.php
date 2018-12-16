@@ -23,20 +23,24 @@
  	 ?>
  	
 
+	<!--=============================
+	=            PLUGINS            =
+	==============================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/plugins/bootstrap.min.css">
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/plantilla.css?v=3">
+	<!--====================================================
+	=            HOJAS DE ESTILO PERSONALIZADOS            =
+	=====================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/plantilla.css?v=03">
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/header.css?v=04">
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/slide.css?v=03">
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/productos.css?v=01">
 
-	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/header.css?v=4">
-
-	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/slide.css?v=3">
-
-	<!-- <link rel="stylesheet" type="text/css"  href="Vistas/css/plugins/fontawesome.css"> -->
-
+	<!--==========================================
+	=            PUGINS DE JAVASCRIPT            =
+	===========================================-->
 	<script src="<?php echo $url;?>Vistas/js/plugins/jquery.js"></script>
 	<script src="<?php echo $url;?>Vistas/js/plugins/bootstrap.min.js"></script>
 	<script src="<?php echo $url;?>Vistas/js/plugins/fontawesome.min.js"></script> 
@@ -95,6 +99,7 @@
 	}
 	else{
 		include "modulos/slide.php";
+		include "modulos/destacados.php";
 	}
  ?>
 
@@ -102,14 +107,9 @@
 <!--==========================================
 =            LLAMADA A JAVASCRIPT            =
 ===========================================-->
-
-   	<script src="<?php echo $url;?>Vistas/js/header.js?v=1"></script>	
-	 				
-	<script src="<?php echo $url;?>Vistas/js/plantilla.js?v=1"></script>	
-
-	<script src="<?php echo $url;?>Vistas/js/slide.js?v=5"></script> 
-
-<!--====  End of LLAMADA A JAVASCRIPT  ====-->
+   	<script src="<?php echo $url;?>Vistas/js/header.js?v=2"></script>	
+	<script src="<?php echo $url;?>Vistas/js/plantilla.js?v=2"></script>	
+	<script src="<?php echo $url;?>Vistas/js/slide.js?v=6"></script> 
 
 </body>
 </html>
