@@ -57,8 +57,28 @@ class ModeloProductos
 
 	   	$stmt -> close();
 	}
-	
 	/*=====  End of MOSTRAR SUBCATEGORIAS  ======*/
+
+	
+	/*=========================================
+	=            MOSTRAR PRODUCTOS            =
+	=========================================*/
+	public function mdlMostarProductos($tabla, $ordenar)
+	{
+		//$stmt = Conexion::conectar() -> prepare("SELECT *FROM $tabla WHERE $item = :$item");
+
+		$stmt = Conexion::conectar() -> prepare("SELECT *FROM $tabla ORDER BY $ordenar LIMIT 4");
+
+		//$stmt ->bindParam(":".$item, $valor, PDO::PARAM_INT);
+
+	   	$stmt -> execute();
+
+	   	return $stmt -> fetchAll();
+
+	   	$stmt -> close();
+	}
+	/*=====  End of MOSTRAR PRODUCTOS  ======*/
+	
 }
 
  

@@ -1,4 +1,7 @@
 
+$('[data-toggle = "tooltip"]').tooltip();
+
+
 /*=================================
 =            PLANTILLA            =
 =================================*/
@@ -20,7 +23,9 @@ $.ajax(
 
 /*=====  End of PLANTILLA  ======*/
 
-/*----------  PRODUCTOS CUADRICULA O LISTA  ----------*/
+/*==================================================
+=            PRODUCTOS CUADRICULA LISTA            =
+==================================================*/
 var btnList = $(".btnList");
 
 $('.btnList, .btnGrid').on('click', function(){
@@ -28,7 +33,6 @@ $('.btnList, .btnGrid').on('click', function(){
 	var idListado = $(this).attr("id");
 
 	var sss = idListado.substr(idListado.length-1);
-
 
 	//console.log(sss);
 	//for (var i = btnList.length - 1; i >= 0; i--) {
@@ -54,5 +58,39 @@ $('.btnList, .btnGrid').on('click', function(){
 			}
 		}
 	//}
-});
+	});
 
+/*=====  End of PRODUCTOS CUADRICULA LISTA  ======*/
+
+/*======================================
+=            EFECTOS SCROLL            =
+======================================*/
+$(window).scroll(function(){
+
+	var scrollY = window.pageYOffset;
+
+	if(window.matchMedia("(min-width:768px)").matches){
+		if(scrollY < ( $(".banner").offset().top)-200){
+			$('.banner img').css({"margin-top":-scrollY/2+"px"});
+		}
+		else{
+			scrollY = 0;
+		}
+	}
+});
+/*=====  End of EFECTOS SCROLL  ======*/
+
+
+// $.scrollUp({
+// 	scrollText :"",
+// 	scrollSpeed:200,
+// 	easingType:"easeOutQuint"
+// });
+
+// $(function(){
+// 	 $.scrollUp({
+// 	 scrollText:"",
+// 	 scrollSpeed: 10,
+// 	 easingType: "easeOutQuint"
+// 	 });
+// });

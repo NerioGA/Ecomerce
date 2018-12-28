@@ -145,28 +145,29 @@ VITRINA PRODUCTOS LISTA
 
 .fontSize{
 	font-size: 11px;
-}
 
+}
 /*======================================================
 PARA CONFIGURACION DE PANTALAS
 ======================================================*/
 /*PANTALAS GRANDES*/
 @media (min-width: 1200px) {
-	.banner{
+
+.banner{
 		height: 260px;
 	}
 }
 /*ESCRITORIO MEDIANO*/
 @media (max-width: 1199px) and (min-width: 992px) {
 		.banner{
-		height: 260px;
+		height: 220px;
 	}
 }
 /*PARA ESCRITORIO PEQUEÑO*/
 @media (max-width: 991px) and (min-width: 768px) {
 	
 	.banner{
-		height: 18px;
+		height: 200px;
 	}
 
 	.textoBanner h1{
@@ -193,8 +194,8 @@ PARA CONFIGURACION DE PANTALAS
 /*MOVIL (XS revismos en 320px)*/
 @media (max-width: 767px) {
 	.banner{
-		height: 100px;
-	}
+		height: 150px;
+	} 
 
 	.banner .textoDer, .banner .textoCentro, .banner .textoIzq{
 		top: 7px;

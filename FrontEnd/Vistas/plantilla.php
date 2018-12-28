@@ -33,10 +33,10 @@
 	<!--====================================================
 	=            HOJAS DE ESTILO PERSONALIZADOS            =
 	=====================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/plantilla.css?v=03">
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/plantilla.css?v=04">
 	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/header.css?v=04">
 	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/slide.css?v=03">
-	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/productos.css?v=01">
+	<link rel="stylesheet" type="text/css" href="<?php echo $url;?>Vistas/css/productos.css?v=02">
 
 	<!--==========================================
 	=            PUGINS DE JAVASCRIPT            =
@@ -44,6 +44,7 @@
 	<script src="<?php echo $url;?>Vistas/js/plugins/jquery.js"></script>
 	<script src="<?php echo $url;?>Vistas/js/plugins/bootstrap.min.js"></script>
 	<script src="<?php echo $url;?>Vistas/js/plugins/fontawesome.min.js"></script> 
+<!-- 	<script src="<?php echo $url;?>Vistas/js/plugins/jquery.scrollUp.js"></script>  -->
 
 </head>
 <body>
@@ -108,7 +109,7 @@
 =            LLAMADA A JAVASCRIPT            =
 ===========================================-->
    	<script src="<?php echo $url;?>Vistas/js/header.js?v=2"></script>	
-	<script src="<?php echo $url;?>Vistas/js/plantilla.js?v=2"></script>	
+	<script src="<?php echo $url;?>Vistas/js/plantilla.js?v=3"></script>	
 	<script src="<?php echo $url;?>Vistas/js/slide.js?v=6"></script> 
 
 </body>

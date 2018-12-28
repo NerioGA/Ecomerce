@@ -27,9 +27,23 @@ class ControladorProductos
 
 		return $respuesta;
 	}
-	
-	
 	/*=====  End of MOSTRAR SUBCATEGORIAS  ======*/
+
+	/*=========================================
+	=            MOSTRAR PRODUCTOS            =
+	=========================================*/
+	static public function crtMostrarProductos($ordenar)
+	{
+		$tabla = "productos";
+		$respuesta = ModeloProductos::mdlMostarProductos($tabla, $ordenar);
+		return $respuesta;
+	}
+	
+	
+	/*=====  End of MOSTRAR PRODUCTOS  ======*/
+	
+
+
 }
 
 

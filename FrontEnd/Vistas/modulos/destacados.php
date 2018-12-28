@@ -2,7 +2,28 @@
 =            BANER            =
 ============================-->
 <?php 
+
+	$titulosMostrados = array("ARTICULOS GRATUITOS","LO MÁS VENDIDOS","LO MÁS VISTOS");
+
 	$servidor = Ruta::ctrRutaServidor();
+
+	if($titulosMostrados[0]== "ARTICULOS GRATUITOS"){
+		$ordenar = "Id";
+		$gratis = ControladorProductos::crtMostrarProductos($ordenar);
+	}
+
+	if($titulosMostrados[1]== "LO MÁS VENDIDOS"){
+		$ordenar = "ventas";
+		$ventas = ControladorProductos::crtMostrarProductos($ordenar);
+	}
+
+	if($titulosMostrados[2]== "LO MÁS VISTOS"){
+		$ordenar = "vistas";
+		$vistas = ControladorProductos::crtMostrarProductos($ordenar);
+	}
+	
+
+	
  ?>
 
 <figure class="banner">
@@ -20,11 +41,35 @@
 
 <!--====  End of BANER  ====-->
 
+<?php 
+	for ($i=0; $i <count($titulosMostrados); $i++) { 
+		# code...
+		echo'<div class="container-fluid well well-sm barraProductos">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 organizarProductos">
+							<div class="btn-group pull-right">
+								<button type="button" class="btn btn-default btnGrid" id="btnGrid'.$i.'">
+									<i class="fa fa-th"></i>
+									 <span class="visible-sm visible-md visible-lg pull-right"> GRID</span>
+								</button>
+
+								<button type="button" class="btn btn-default btnList" id="btnList'.$i.'">
+									<i class="fa fa-list"></i>
+									 <span class="visible-sm visible-md visible-lg pull-right"> LIST</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>';
+	}
+?>
 
 <!--===============================================
 =            BARRA DE PRODUCTOS GRATIS            =
 ================================================-->
-<div class="container-fluid well well-sm barraProductos">
+<!-- <div class="container-fluid well well-sm barraProductos">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 organizarProductos">
@@ -43,7 +88,7 @@
 		</div>
 	</div>
 	
-</div>
+</div> -->
 
 <!--====  End of BARRA DE PRODUCTOS GRATIS  ====<-->
 <div class="container-fluid productos">
